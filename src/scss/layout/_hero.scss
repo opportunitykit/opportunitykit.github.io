@@ -1,115 +1,94 @@
 .hero {
-    padding-top: 48px;
+	text-align: center;
+    padding-top: 40px;
 }
 
 .hero-paragraph {
-    margin-bottom: 32px;
+	@include font-size(4, mobile, true, true, true);
+	@if ( get-font-size(4, desktop) != get-font-size(4, mobile) ) {
+		@include media( '>medium' ) {
+			@include font-size(4, desktop, true, true, true);
+		}
+	}
+    margin-bottom: 40px;
+}
+
+.hero-form {
+	max-width: 440px;
+	margin: 0 auto;
 }
 
 .hero-illustration {
-	display: none;
 	position: relative;
+    margin-top: 48px;
 }
 
-.hero-bg,
-.hero-square,
-.hero-dots,
-.hero-line {
-	position: absolute;
-	transform-origin: 50% 50%;
+.hero-shape {
+	display: none;
+    position: absolute;
 }
 
-.hero-bg {
-	top: -160px;
-	left: 28px;
-}
+.hero-main-shape {
 
-.hero-square-1 {
-	top: -270px;
-	left: 150px;
-}
-
-.hero-square-2 {
-	top: -42px;
-	left: 600px;
-}
-
-.hero-square-3 {
-	top: 46px;
-	left: 74px;
-}
-
-.hero-square-4 {
-	top: 0;
-	left: 250px;
-}
-
-.hero-square-5 {
-	top: 108px;
-	left: 633px;
-}
-
-.hero-square-6 {
-	top: 140px;
-	left: 185px;
-}
-
-.hero-square-7 {
-	top: 336px;
-	left: 600px;
-}
-
-.hero-square-8 {
-	top: 350px;
-	left: 193px;
-}
-
-.hero-dots-1 {
-	top: -107px;
-	left: 397px;
-}
-
-.hero-dots-2 {
-	top: 65px;
-	left: 202px;
-}
-
-.hero-dots-3 {
-	top: 396px;
-	left: 53px;
-}
-
-.hero-line-1 {
-	top: 318px;
-	left: 229px;
+	svg {
+		width: 140%;
+		height: auto;
+	}
 }
 
 @include media( '>medium' ) {
 
     .hero {
-        padding-top: 80px;
+		text-align: left;
+        padding-top: 160px;
     }
 
 	.hero-inner {
-		/* Split hero in two parts */
+		/* Split hero in two half */
 		display: flex;
 	}
 
 	.hero-copy {
 		padding-right: 48px;
 		min-width: 512px;
-		width: 512px;
+	}
+
+	.hero-form {
+		margin: 0;
 	}
 
 	.hero-illustration {
+		margin-top: -143px;
+		padding-bottom: 0;
+	}
+
+	.hero-shape {
 		display: block;
-		width: 528px;
+	}
+
+	.hero-shape-1 {
+		left: -32px;
+		top: 542px;
+	}
+
+	.hero-shape-2 {
+		left: -733px;
+		top: 538px;
+	}
+
+	.hero-main-shape {
+
+		svg {
+			width: auto;
+			height: 647px;
+		}
 	}
 }
 
-@include media( '<=medium' ) {
+@include media( '>large' ) {
 
-	.hero-form {
-		margin: 0 auto;
-	}
+    .hero-copy {
+        padding-right: 92px;
+        min-width: 620px;
+    }
 }
