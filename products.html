@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Opportunity Kit</title>
+    <meta name="description"
+          content="OpportunityKit makes business easy."/>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
+body { 
+    background-color: white;
+    color: black;
+    padding: 0;
+     margin: 0; 
+
+    } 
+
+    h1 {
+      font-family: monospace;
+      font-size: 60px;
+      padding: 5px;
+      padding-left: 30px;
+        
+    }
+
+    header {
+        padding: 10px;
+        justify-content: center;
+        overflow:hidden;
+        background-color: #f1f1f1;
+    }
+
+.flex-container {
+  color: black;
+  font-family: cursive;
+  align-items:center;
+  align-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  border: 2px solid black;
+  margin: 50px;
+  padding: 60px;
+  min-width:300px;
+  font-size: 30px;
+  min-height:50px;
+  text-align: center;
+  border-radius: 2%;
+}
+
+.box:hover {
+  background-color: #c0c0c0;
+ border: none;
+ color: #a0a0a0;
+  transition: background-color 0.5s;
+}
+#logo {
+    float:right;
+    display: block;
+    width: 250px;
+    height: 250px;
+    margin-bottom: -60px;
+
+} 
+
+#headerText {
+    font-size: 20px;
+    font-family: cursive;
+    padding: 8px;
+    line-height: 35px;
+    padding-left: 30px;
+    width:350px;
+}
+</style>
+</head>
+<body>
+<header>
+<img id="logo"src="img/mechanic1.png">
+ <h1 id="heading">Business-Type Container</h1>
+ <p id="headerText">A person who repairs and maintains machinery. <br>This is a very common business type to<br> be chosen, often it is beneficial to <br>choose a common business type</p>
+</header>
+  
+
+<div class="flex-container">
+  <div class="box" onclick="location.href = 'products.html';">Website Manager</div>
+  <div class="box" onclick="location.href = 'products.html';">Marketing Manager</div>
+  <div class="box" onclick="location.href = 'products.html';">Finance Manager</div>  
+  <div class="box" onclick="location.href = 'products.html';">Employee Manager</div>
+  <div class="box" onclick="location.href = 'products.html';">Client Manager</div>
+  <div class="box" onclick="location.href = 'products.html';">TBA</div> 
+</div>
+
+<script>
+    var product=localStorage.getItem("product");
+    const heading = document.getElementById('heading');
+    var description=localStorage.getItem("description");
+    const descriptionText = document.getElementById('headerText');
+
+    // ✅ Change (replace) the text of the element
+    heading.textContent = product;
+    descriptionText.textContent = description;
+</script>
+</body>
+</html>
+
+

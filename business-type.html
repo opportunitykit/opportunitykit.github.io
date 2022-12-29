@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Opportunity Kit</title>
+  <meta name="description"
+        content="OpportunityKit makes business easy."/>
+<style>
+body { 
+    background-color: white;
+    color: black;
+    padding: 0;
+     margin: 0; 
+     
+     
+    } 
+
+    h1 {
+      font-family: monospace;
+      font-size: 40px;
+        padding: 40px;
+        background-color: #f1f1f1;
+    }
+
+.flex-container {
+  color: black;
+  font-family: cursive;
+  align-items:center;
+  align-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  border: 2px solid black;
+  margin: 50px;
+  padding: 60px;
+  min-width:300px;
+  font-size: 30px;
+  min-height:100px;
+  text-align: center;
+  border-radius: 2%;
+}
+
+.box:hover {
+  background-color: #c0c0c0;
+ border: none;
+ color: #a0a0a0;
+  transition: background-color 0.5s;
+}
+</style>
+</head>
+<body>
+
+<h1>Select Your Business Type</h1>
+
+<div class="flex-container">
+  <div class="box" onclick="location.href = 'products.html';ptMechanic()">Mechanics</div>
+  <div class="box" onclick="location.href = 'products.html';ptBeauty()">Beauty</div>
+  <div class="box" onclick="location.href = 'products.html';ptSoftware()">Software</div>  
+  <div class="box" onclick="location.href = 'products.html';ptMechanic()">Mechanics</div>
+  <div class="box" onclick="location.href = 'products.html';ptBeauty()">Beauty</div>
+  <div class="box" onclick="location.href = 'products.html';ptSoftware()">Software</div> 
+</div>
+
+
+<script>
+  function ptMechanic() {
+    localStorage.setItem("product", "Mechanic");
+    localStorage.setItem("description", "A person who repairs and maintains machinery. This is a very common business type to be chosen, often it is beneficial to choose a common business type");
+  }
+  function ptBeauty() {
+    localStorage.setItem("product", "Beauty");
+    localStorage.setItem("description", "A person whose job is to do hair styling, manicures, and other beauty treatments.");
+  }
+  function ptSoftware() {
+    localStorage.setItem("product", "Software");
+    localStorage.setItem("description", "Computer science professionals who use knowledge of engineering principles and programming languages to build software products, develop computer games, and run network control systems.");
+  }
+</script>  
+</body>
+</html>
+
+
